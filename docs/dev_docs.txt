@@ -48,7 +48,7 @@
 
 			!see code for complete implementation;
 	
-	#tested routes with postam and it works;
+	#tested routes with postman and it works;
 
 
 
