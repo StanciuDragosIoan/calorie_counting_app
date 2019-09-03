@@ -1,0 +1,56 @@
+-Set up mongoDB atlas connection;
+
+
+##set up database;
+
+	#logged to mongoDB atlas, created a project;
+	#created a cluster (choose options);
+	#set up database user (calorie123) and password (calorie123);
+
+##whitelisted ip address (allowed access from anywhere as app is ofr prototyping);
+
+
+##set up express server + installed dependencies;
+	#initialiez npm package in the root directory, where the backend will be (npm init -y);
+	#installed regular dependencies (npm i express bcryptjs jsonwebtoken config express-validator mongoose --save;  
+		@the --save is to save the dependencies
+	#installed dev dependencies (only used while developing) --> npm i -D nodemon concurrently --save
+        #set up custom scripts:
+
+	 "scripts": {
+    		"start": "node server.js",
+    		"server": "nodemon server.js"
+  	  },
+
+	#created server.js (entry point for the backend);
+
+
+##set up routing files (end points for the react app when it registers users, logs in, gets calories, update calories, etc..)
+	#created a folder called routes;
+	#created a calories.js/users.js and auth.js files inside 'routes';
+	#set up routes
+		@defined them in server.js with app.use('/api/users', require('./routes/users'))  ->url/path;
+		@set them up in the routes file (users.js in this case) :
+
+			const express = require('express');
+			const router = express.Router();
+
+
+			// @route  POST  api/users
+			// @desc   Register a user
+			// @access Public
+			router.post('/', (req, res) => {
+    				res.send('Registers User');
+			});       //   ./ pertains to api/users
+
+
+			module.exports = router;
+
+			!see code for complete implementation;
+	
+	#tested routes with postam and it works;
+
+
+
+
+@@left at video 41;
